@@ -110,7 +110,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 8rem 2rem 6rem;
+    padding: 12rem 2rem 6rem; /* Changed from 8rem to 12rem */
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
