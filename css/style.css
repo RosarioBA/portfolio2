@@ -160,49 +160,11 @@ body {
     transform: translateY(-2px);
     box-shadow: var(--shadow-xl);
 }
-/* Projects Section - Centered Initially, Left/Right on Click */
-
-.projects {
-    padding: 6rem 2rem;
-    background: var(--bg-secondary);
-}
-
-.projects-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-}
-
-.section-subtitle {
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    margin-bottom: 4rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.projects-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: relative;
-    align-items: center;
-    min-height: 600px;
-}
 
 /* Projects Section - Centered Initially, Left/Right on Click */
 
 .projects {
-    padding: 6rem 2rem;
+    padding: 3rem 2rem;
     background: var(--bg-secondary);
 }
 
@@ -255,6 +217,7 @@ body {
     max-width: 70%;
     margin-left: 0;
     position: relative;
+    line-height: 3.5;
 }
 
 /* When one is active - non-active projects move left and shrink */
@@ -271,6 +234,7 @@ body {
     box-shadow: var(--shadow-xl);
     z-index: 10;
     min-height: 400px;
+    line-height: 2;
 }
 
 .project-item:nth-child(1) {
@@ -1730,5 +1694,73 @@ body {
     .contact-button {
         padding: 0.8rem 2rem;
         font-size: 0.9rem;
+    }
+}
+/* Side Email Contact */
+.side-contact {
+    position: fixed;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    z-index: 50;
+    transition: all 0.3s ease;
+}
+ /* Side Email Contact */
+.side-contact {
+    position: fixed;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    z-index: 50;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: #dc7a78;
+}
+
+/* Right side email */
+.side-contact.right {
+    right: 3rem;
+    bottom: 20%;
+    transform: translateY(50%) rotate(90deg);
+    transform-origin: right bottom;
+}
+
+/* Line before email */
+.side-contact.right::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: #dc7a78;
+    margin-right: 1rem;
+}
+
+/* Line after email */
+.side-contact.right::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: #dc7a78;
+    margin-left: 1rem;
+}
+
+/* Hover effect */
+.side-contact:hover {
+    color: #fecaca;
+}
+
+.side-contact:hover::before,
+.side-contact:hover::after {
+    background: #fecaca;
+}
+
+/* Mobile hide */
+@media (max-width: 768px) {
+    .side-contact {
+        display: none;
     }
 }
