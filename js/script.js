@@ -178,3 +178,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+// Expandable Projects Functionality
+
+function toggleProject(headerElement) {
+    const projectItem = headerElement.parentElement;
+    const isActive = projectItem.classList.contains('active');
+    
+    // Close all other projects
+    document.querySelectorAll('.project-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    // Toggle current project
+    if (!isActive) {
+        projectItem.classList.add('active');
+    }
+}
+
+// Optional: Close project when clicking outside
+document.addEventListener('click', function(event) {
+    const projectsContainer = document.querySelector('.projects-list');
+    if (projectsContainer && !projectsContainer.contains(event.target)) {
+        // Could close all projects here if desired
+        // document.querySelectorAll('.project-item').forEach(item => {
+        //     item.classList.remove('active');
+        // });
+    }
+});
+
+// Projects Toggle Function
+function toggleProject(headerElement) {
+    const projectItem = headerElement.parentElement;
+    const projectsList = document.querySelector('.projects-list');
+    const isActive = projectItem.classList.contains('active');
+    
+    // Close all other projects
+    document.querySelectorAll('.project-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    // Toggle current project
+    if (!isActive) {
+        projectItem.classList.add('active');
+        // Add class to list to trigger left movement
+        projectsList.classList.add('has-active');
+    } else {
+        projectsList.classList.remove('has-active');
+    }
+}
