@@ -34,11 +34,13 @@ body {
 
 /* Logo styles */
 .logo-image {
-    height: 50px;
-    width: auto;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 6px 20px rgba(254, 202, 202, 0.35);
-    display: block;
+   height: 50px;
+   width: auto;
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   box-shadow: 2px 6px 20px rgb(211, 120, 117);
+   display: block;
+   border-radius: 10px;
+   background-color: #d37875;
 }
 
 .logo-image:hover {
@@ -215,8 +217,7 @@ body {
     max-width: 70%;
     margin-left: 0;
     position: relative;
-    line-height: 3.5;
-    /* Shrink animation */
+    line-height: 2;
     transition: max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
