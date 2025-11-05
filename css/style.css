@@ -160,8 +160,7 @@ body {
     transform: translateY(-2px);
     box-shadow: var(--shadow-xl);
 }
-
-/* Projects Section - Centered Initially, Left/Right on Click */
+/* Projects Section - Controlled by JavaScript */
 
 .projects {
     padding: 3rem 2rem;
@@ -198,34 +197,35 @@ body {
     position: relative;
     align-items: center;
     min-height: 600px;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-list.has-active {
     align-items: flex-start;
 }
 
-/* Project Item - Initially Centered and Bigger */
+/* Project Item - Initially Centered */
 .project-item {
     background: white;
     border-radius: 20px;
     border: 1px solid transparent;
     box-shadow: var(--shadow);
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     max-width: 70%;
     margin-left: 0;
     position: relative;
     line-height: 3.5;
+    /* Shrink animation */
+    transition: max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* When one is active - non-active projects move left and shrink */
+/* When list has active - non-active projects shrink */
 .projects-list.has-active .project-item:not(.active) {
     max-width: 45%;
 }
 
-/* When clicked - appears on right, moves with scroll */
+/* Active state - move to right (COMPACT - no width/height expansion yet) */
 .project-item.active {
     position: absolute;
     right: 0;
@@ -233,8 +233,21 @@ body {
     max-width: none;
     box-shadow: var(--shadow-xl);
     z-index: 10;
-    min-height: 400px;
     line-height: 2;
+    min-height: 120px; /* Start compact */
+    /* Move animation - position ONLY, no width/height */
+    transition: position 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                right 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Expand height AFTER movement is complete */
+.project-item.active.expand-height {
+    min-height: 400px;
+    transition: position 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                right 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                min-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-item:nth-child(1) {
@@ -249,7 +262,7 @@ body {
     border-color: var(--accent-yellow);
 }
 
-/* Project Header - Always Visible */
+/* Project Header */
 .project-header {
     padding: 2rem;
     cursor: pointer;
@@ -282,7 +295,6 @@ body {
     flex-shrink: 0;
 }
 
-/* ADD THIS NEW CLASS */
 .project-favicon {
     width: 100%;
     height: 100%;
@@ -325,19 +337,23 @@ body {
     transform: rotate(45deg);
 }
 
-/* Project Content - Hidden by default, slides in when active */
+/* Project Content - ALWAYS HIDDEN by default */
 .project-content {
     max-height: 0;
     overflow: hidden;
     padding: 0 2rem;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
+    transition: none; /* NO transition initially */
 }
 
-.project-item.active .project-content {
+/* Show content class - added by JS after movement */
+.project-item.show-content .project-content {
     max-height: 500px;
     opacity: 1;
     padding: 0 2rem 2rem 2rem;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-description {
@@ -464,7 +480,7 @@ body {
         padding: 0 1.5rem;
     }
 
-    .project-item.active .project-content {
+    .project-item.show-content .project-content {
         padding: 0 1.5rem 1.5rem 1.5rem;
     }
 }
