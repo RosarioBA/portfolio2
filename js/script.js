@@ -205,24 +205,42 @@ document.addEventListener('click', function(event) {
         // });
     }
 });
-
-// Projects Toggle Function
+// Projects Toggle Function with Proper Timing
 function toggleProject(headerElement) {
     const projectItem = headerElement.parentElement;
     const projectsList = document.querySelector('.projects-list');
     const isActive = projectItem.classList.contains('active');
     
-    // Close all other projects
-    document.querySelectorAll('.project-item').forEach(item => {
-        item.classList.remove('active');
-    });
-    
-    // Toggle current project
-    if (!isActive) {
-        projectItem.classList.add('active');
-        // Add class to list to trigger left movement
-        projectsList.classList.add('has-active');
+    if (isActive) {
+        // CLOSING: Collapse content first, then move back
+        projectItem.classList.remove('show-content');
+        
+        setTimeout(() => {
+            projectItem.classList.remove('active');
+            projectsList.classList.remove('has-active');
+        }, 400); // Wait for content to collapse
+        
     } else {
-        projectsList.classList.remove('has-active');
+        // OPENING: Shrink all first, then move, then expand content
+        projectsList.classList.add('has-active');
+        
+        // Wait for shrink animation
+        setTimeout(() => {
+            // Close all other projects
+            document.querySelectorAll('.project-item').forEach(item => {
+                item.classList.remove('active');
+                item.classList.remove('show-content');
+            });
+            
+            // Activate this project and move it
+            projectItem.classList.add('active');
+            
+            // Wait for FULL movement animation to complete (0.5s) THEN show content
+            setTimeout(() => {
+                // Now show content AFTER movement is done
+                projectItem.classList.add('show-content');
+            }, 600); // Wait 600ms to ensure movement is complete, then expand
+            
+        }, 300); // Shrink takes 0.3s
     }
 }
