@@ -239,7 +239,7 @@ function toggleProject(headerElement) {
             setTimeout(() => {
                 // Now show content AFTER movement is done
                 projectItem.classList.add('show-content');
-            }, 600); // Wait 600ms to ensure movement is complete, then expand
+            }, 200); // Wait 200ms to ensure movement is complete, then expand
             
         }, 300); // Shrink takes 0.3s
     }
