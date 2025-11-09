@@ -219,7 +219,8 @@ body {
     max-width: 70%;
     margin-left: 0;
     position: relative;
-    line-height: 2;
+    line-height: 3.5;
+    /* Shrink animation */
     transition: max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -334,6 +335,9 @@ body {
     font-weight: 300;
     transition: transform 0.3s ease;
     flex-shrink: 0;
+    align-self: flex-start;
+    padding-top: 0.25rem;
+    margin-left: auto;
 }
 
 .project-item.active .project-toggle {
