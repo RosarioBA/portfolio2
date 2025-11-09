@@ -10,6 +10,8 @@
     --primary-light: #6b7280;
     --accent-coral: #fecaca;
     --accent-pink: #fed7d7;
+    --accent-beige: #ccaeae45;
+    --accent-pinkish: #dfd1d1;
     --accent-yellow: #fde68a;
     --accent-green: #d1fae5;
     --accent-blue: #dbeafe;
@@ -629,6 +631,7 @@ body {
     margin-bottom: 2.5rem;
     font-size: 1.1rem;
 }
+/* Updated Social Links with Logo Icons */
 
 .social-links {
     display: flex;
@@ -647,7 +650,6 @@ body {
     border-radius: 50%;
     color: white;
     text-decoration: none;
-    font-size: 1.3rem;
     transition: all 0.3s ease;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -656,6 +658,12 @@ body {
 .social-link:hover {
     background: rgba(255,255,255,0.2);
     transform: translateY(-3px);
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
 
 .footer-bottom {
@@ -997,13 +1005,13 @@ body {
 }
 
 .btn-share {
-    background: var(--accent-coral);
+    background: var(--accent-beige);
     color: var(--text-primary);
-    border: 1px solid var(--accent-pink);
+    border: 1px solid var(--accent-pinkish);
 }
 
 .btn-share:hover {
-    background: var(--accent-pink);
+    background: var(--accent-pinkish);
     transform: translateY(-2px);
 }
 
@@ -1213,11 +1221,11 @@ body {
 }
 
 .improvement-highlight {
-    background: var(--accent-coral);
+    background: var(--accent-beige);
     padding: 1.5rem;
     border-radius: 12px;
     margin-top: 1.5rem;
-    border-left: 4px solid var(--accent-pink);
+    border-left: 4px solid var(--accent-pinkish);
 }
 
 .improvement-highlight h4 {
@@ -1780,4 +1788,12 @@ body {
     .side-contact {
         display: none;
     }
+}
+/* Project Subtitle */
+.project-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-top: 0.3rem;
+    line-height: 1.4;
 }
