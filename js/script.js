@@ -178,69 +178,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-// Expandable Projects Functionality
-
+// Simple toggle function for two-column projects layout
 function toggleProject(headerElement) {
     const projectItem = headerElement.parentElement;
-    const isActive = projectItem.classList.contains('active');
+    const projectContent = projectItem.querySelector('.project-content');
+    const toggle = projectItem.querySelector('.project-toggle');
     
-    // Close all other projects
-    document.querySelectorAll('.project-item').forEach(item => {
-        item.classList.remove('active');
-    });
+    // Check if currently open
+    const isOpen = projectItem.classList.contains('active');
     
-    // Toggle current project
-    if (!isActive) {
-        projectItem.classList.add('active');
-    }
-}
-
-// Optional: Close project when clicking outside
-document.addEventListener('click', function(event) {
-    const projectsContainer = document.querySelector('.projects-list');
-    if (projectsContainer && !projectsContainer.contains(event.target)) {
-        // Could close all projects here if desired
-        // document.querySelectorAll('.project-item').forEach(item => {
-        //     item.classList.remove('active');
-        // });
-    }
-});
-// Projects Toggle Function with Proper Timing
-function toggleProject(headerElement) {
-    const projectItem = headerElement.parentElement;
-    const projectsList = document.querySelector('.projects-list');
-    const isActive = projectItem.classList.contains('active');
-    
-    if (isActive) {
-        // CLOSING: Collapse content first, then move back
-        projectItem.classList.remove('show-content');
-        
-        setTimeout(() => {
-            projectItem.classList.remove('active');
-            projectsList.classList.remove('has-active');
-        }, 400); // Wait for content to collapse
-        
+    if (isOpen) {
+        // Close this project
+        projectItem.classList.remove('active');
+        projectContent.style.maxHeight = '0';
+        projectContent.style.opacity = '0';
+        projectContent.style.padding = '0 2rem';
+        toggle.style.transform = 'rotate(0deg)';
     } else {
-        // OPENING: Shrink all first, then move, then expand content
-        projectsList.classList.add('has-active');
-        
-        // Wait for shrink animation
-        setTimeout(() => {
-            // Close all other projects
-            document.querySelectorAll('.project-item').forEach(item => {
-                item.classList.remove('active');
-                item.classList.remove('show-content');
-            });
-            
-            // Activate this project and move it
-            projectItem.classList.add('active');
-            
-            // Wait for FULL movement animation to complete (0.5s) THEN show content
-            setTimeout(() => {
-                // Now show content AFTER movement is done
-                projectItem.classList.add('show-content');
-            }, 200); // Wait 200ms to ensure movement is complete, then expand
-            
-        }, 300); // Shrink takes 0.3s
+        // Open this project
+        projectItem.classList.add('active');
+        projectContent.style.maxHeight = projectContent.scrollHeight + 'px';
+        projectContent.style.opacity = '1';
+        projectContent.style.padding = '0 2rem 2rem 2rem';
+        toggle.style.transform = 'rotate(45deg)';
     }
 }

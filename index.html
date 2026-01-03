@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rosario Bustillo de Azevedo - Frontend Developer Portfolio</title>
-    <meta name="description" content="Portfolio showcasing frontend development projects and skills">
+    <meta name="description" content="Portfolio showcasing frontend development projects combining real-world client work with technical expertise">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/logo-new3.png">
@@ -39,108 +39,178 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <h1><span class="typewriter">Hi, I'm Rosario</span></h1>
-        <p class="subtitle">I create beautiful, user-focused web experiences with attention to detail and modern best practices.</p>
-        <a href="#projects" class="cta-button">
-            View My Work
-            <!-- <div class="loading-dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div> -->
-        </a>
+        <p class="subtitle">Frontend developer building real-world solutions for restaurants and businesses, with a background in design and digital marketing.</p>
+        <a href="#projects" class="cta-button">View My Work</a>
     </section>
 
-   <!-- Featured Projects Section - With Front Page Screenshots -->
+   <!-- Projects Section - Two Column Layout -->
 <section class="projects" id="projects">
     <div class="projects-container">
-        <h2 class="section-title">Featured Projects</h2>
-                <div class="contact-underline"></div>
-        <p class="section-subtitle">A selection of my recent work showcasing different skills and approaches</p>
+        <h2 class="section-title">Projects</h2>
+        <div class="contact-underline"></div>
+        <p class="section-subtitle">Real-world client work and academic projects showcasing my technical skills</p>
         
-        <div class="projects-list">
-          <!-- Project 3: Bonita Receipt View -->
-            <div class="project-item">
-                <div class="project-header" onclick="toggleProject(this)">
-                    <div class="project-header-content">
-                        <div class="project-icon">
-                            <img src="images/receipt-view2.png" alt="Bonita Receipt" class="project-favicon">
+        <div class="projects-two-col-wrapper">
+            <!-- Left Column: Client Projects -->
+            <div class="projects-column">
+                <h3 class="column-title">Client Projects</h3>
+                <p class="column-subtitle">Real-world applications for Bonita Cafe & De La Casa</p>
+                
+                <div class="column-projects">
+                    <!-- Project 1: Bonita Receipt View -->
+                    <div class="project-item">
+                        <div class="project-header" onclick="toggleProject(this)">
+                            <div class="project-header-content">
+                                <div class="project-icon">
+                                    <img src="images/receipt-view2.png" alt="Bonita Receipt" class="project-favicon">
+                                </div>
+                                <div>
+                                    <h3 class="project-title">Bonita Receipt View</h3>
+                                    <p class="project-subtitle">Customer-facing receipt viewing system</p>
+                                </div>
+                                <div class="project-toggle">+</div>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="project-title">Bonita Receipt View</h3>
-                            <p class="project-subtitle">Professional receipt viewing made simple</p>
+                        <div class="project-content">
+                            <p class="project-description">Production receipt viewing application providing customers with clean, accessible digital receipts. Built with modern web technologies for optimal performance and user experience.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">UI Design</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="bonita-receipt.html" class="project-link primary">View Case Study</a>
+                                <a href="https://receipts.bonitahandel.no/" class="project-link secondary" target="_blank" rel="noopener">Live Site</a>
+                                <a href="https://github.com/lacostej/bonita-receipt-view" class="project-link secondary" target="_blank" rel="noopener">GitHub</a>
+                            </div>
                         </div>
-                        <div class="project-toggle">+</div>
                     </div>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">Receipt viewing application showcasing clean UI design and component architecture. Built with modern web technologies for optimal performance and user experience.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">UI Design</span>
-                        <span class="tech-tag">Components</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="bonita-receipt.html" class="project-link primary">View Project</a>
-                        <a href="https://receipts.bonitahandel.no/" class="project-link secondary" target="_blank" rel="noopener">Live Site</a>
-                        <a href="https://github.com/lacostej/bonita-receipt-view" class="project-link secondary" target="_blank" rel="noopener">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 1: Holidaze -->
-            <div class="project-item">
-                <div class="project-header" onclick="toggleProject(this)">
-                    <div class="project-header-content">
-                        <div class="project-icon">
-                            <img src="images/holidaze.png" alt="Holidaze" class="project-favicon">
+
+                    <!-- Project 2: Daily Reconciliation Dashboard -->
+                    <div class="project-item">
+                        <div class="project-header" onclick="toggleProject(this)">
+                            <div class="project-header-content">
+                                <div class="project-icon">
+                                    <img src="images/reconciliation-placeholder.png" alt="Reconciliation Dashboard" class="project-favicon">
+                                </div>
+                                <div>
+                                    <h3 class="project-title">Daily Reconciliation Dashboard</h3>
+                                    <p class="project-subtitle">End-of-day accounting and financial tracking</p>
+                                </div>
+                                <div class="project-toggle">+</div>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="project-title">Holidaze Booking Platform</h3>
-                            <p class="project-subtitle">Seamless booking experience for travelers and hosts</p>
+                        <div class="project-content">
+                            <p class="project-description">Internal dashboard comparing POS sales with actual payment tenders across multiple payment methods. Transforms raw transaction data into clear, actionable insights for managers and accountants.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">API Integration</span>
+                                <span class="tech-tag">Data Visualization</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="reconciliation.html" class="project-link primary">View Case Study</a>
+                                <span class="project-note">Private client project</span>
+                            </div>
                         </div>
-                        <div class="project-toggle">+</div>
                     </div>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">Modern accommodation booking platform built with React & TypeScript, featuring dual-role functionality for customers and venue managers.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                        <span class="tech-tag">API Integration</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="holidaze.html" class="project-link primary">View More</a>
-                        <a href="https://rosarioba.github.io/holidaze-booking-app/" class="project-link secondary">Live site</a> 
+
+                    <!-- Project 3: Numa Booking System -->
+                    <div class="project-item">
+                        <div class="project-header" onclick="toggleProject(this)">
+                            <div class="project-header-content">
+                                <div class="project-icon">
+                                    <img src="images/numa-placeholder.png" alt="Numa Booking" class="project-favicon">
+                                </div>
+                                <div>
+                                    <h3 class="project-title">Numa Booking System</h3>
+                                    <p class="project-subtitle">Hotel breakfast tracking and verification</p>
+                                </div>
+                                <div class="project-toggle">+</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">Breakfast service tracking system for hotel guests. Staff can verify authorized rooms, check off arrivals, and view upcoming bookings to streamline operations and prevent unauthorized access.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Full-stack</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="numa-booking.html" class="project-link primary">View Case Study</a>
+                                <span class="project-note">Private client project • In development</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2: BidLeaf -->
-            <div class="project-item">
-                <div class="project-header" onclick="toggleProject(this)">
-                    <div class="project-header-content">
-                        <div class="project-icon">
-                            <img src="images/bidleaf.png" alt="BidLeaf" class="project-favicon">
+            <!-- Right Column: Academic Projects -->
+            <div class="projects-column">
+                <h3 class="column-title">Academic Projects</h3>
+                <p class="column-subtitle">Course projects demonstrating technical proficiency</p>
+                
+                <div class="column-projects">
+                    <!-- Project 4: Holidaze -->
+                    <div class="project-item">
+                        <div class="project-header" onclick="toggleProject(this)">
+                            <div class="project-header-content">
+                                <div class="project-icon">
+                                    <img src="images/holidaze.png" alt="Holidaze" class="project-favicon">
+                                </div>
+                                <div>
+                                    <h3 class="project-title">Holidaze Booking Platform</h3>
+                                    <p class="project-subtitle">Full-featured accommodation booking system</p>
+                                </div>
+                                <div class="project-toggle">+</div>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="project-title">BidLeaf Auction Platform</h3>
-                            <p class="project-subtitle">Bid, list, and manage auctions with ease</p>
+                        <div class="project-content">
+                            <p class="project-description">Modern accommodation booking platform built with React & TypeScript, featuring dual-role functionality for customers and venue managers. Includes booking management, venue creation, and calendar availability.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">API Integration</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="holidaze.html" class="project-link primary">View Project</a>
+                                <a href="https://rosarioba.github.io/holidaze-booking-app/" class="project-link secondary" target="_blank" rel="noopener">Live Site</a>
+                                <a href="https://github.com/RosarioBA/holidaze-booking-app" class="project-link secondary" target="_blank" rel="noopener">GitHub</a>
+                            </div>
                         </div>
-                        <div class="project-toggle">+</div>
                     </div>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">Interactive auction website built with vanilla JavaScript where users can create listings, place bids, and manage their auction activities.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                        <span class="tech-tag">Vite</span>
-                        <span class="tech-tag">REST API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="bidleaf.html" class="project-link primary">View Project</a>
-                        <a href="https://bidleaf.netlify.app/" class="project-link secondary">Live Site</a>
+
+                    <!-- Project 5: BidLeaf -->
+                    <div class="project-item">
+                        <div class="project-header" onclick="toggleProject(this)">
+                            <div class="project-header-content">
+                                <div class="project-icon">
+                                    <img src="images/bidleaf.png" alt="BidLeaf" class="project-favicon">
+                                </div>
+                                <div>
+                                    <h3 class="project-title">BidLeaf Auction Platform</h3>
+                                    <p class="project-subtitle">Real-time auction and bidding system</p>
+                                </div>
+                                <div class="project-toggle">+</div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-description">Interactive auction website built with vanilla JavaScript where users can create listings, place bids, and manage their auction activities. Features real-time bid updates and comprehensive user profiles.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="bidleaf.html" class="project-link primary">View Project</a>
+                                <a href="https://bidleaf.netlify.app/" class="project-link secondary" target="_blank" rel="noopener">Live Site</a>
+                                <a href="https://github.com/RosarioBA/bidleaf-sp2" class="project-link secondary" target="_blank" rel="noopener">GitHub</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -152,7 +222,7 @@
     <div class="about-header">
         <h2 class="about-title">About Me</h2>
         <div class="contact-underline"></div>
-        <p class="about-subtitle">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
+        <p class="about-subtitle">Frontend developer with a unique blend of technical skills and business experience</p>
     </div>
 
     <div class="about-content">
@@ -160,10 +230,10 @@
         <div class="about-left">
             <h3 class="about-section-title">Get to know me!</h3>
             <p class="about-text">
-                I'm Rosario Bustillo de Azevedo, a passionate Frontend Developer with a knack for creating engaging and user-friendly web applications. With a background in design and a keen eye for detail, I strive to build digital experiences that are not only functional but also visually appealing.
+                I'm Rosario Bustillo de Azevedo, a frontend developer currently studying at Noroff School of Technology in Oslo, Norway. My background spans fashion design, digital marketing, and restaurant operations, giving me a unique perspective on building user-centered applications.
             </p>
             <p class="about-text">
-                My journey into web development began with a fascination for how websites are built and how they can impact user experience. I've honed my skills in HTML, CSS, JavaScript, and modern frameworks like React, allowing me to bring ideas to life on the web.
+                Currently, I work as Kitchen Manager and Web Developer at Bonita Cafe/De La Casa, where I develop internal tools and customer-facing applications that solve real business problems. This hands-on experience has taught me to build solutions that are both technically sound and genuinely useful for end users.
             </p>
         </div>
 
@@ -171,37 +241,37 @@
         <div class="about-right">
             <h3 class="about-section-title">My Skills</h3>
             <div class="skills-grid">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">JavaScript</span>
             <span class="skill-tag">HTML5</span>
             <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">React</span>
             <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">API Integration</span>
             <span class="skill-tag">Responsive Design</span>
             <span class="skill-tag">UI/UX</span>
             <span class="skill-tag">Git</span>
-            <span class="skill-tag">API Integration</span>
-            <span class="skill-tag">Next.js</span>
             <span class="skill-tag">Figma</span>
         </div>
     </section>
 
-  <!-- Contact Section - What's Next -->
+  <!-- Contact Section -->
 <section id="contact" class="contact">
     <div class="contact-container">
         <h2 class="contact-title">Let's Connect</h2>
         <div class="contact-underline"></div>
         
         <p class="contact-description">
-            I'm always interested in new opportunities and meaningful collaborations. Whether you have a project in mind, want to discuss web development, or just want to say hi - feel free to reach out!
+            I'm actively seeking junior developer positions in Norwegian tech companies. If you're looking for someone who combines technical skills with real-world business experience, let's talk!
         </p>
         
-        <a href="mailto:marbus22891@stud.noroff.no" class="contact-button">Send Me a Message</a>
+        <a href="mailto:rosarioazevedob@gmail.com" class="contact-button">Send Me a Message</a>
     </div>
 </section>
 
  <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="footer-content">
             <h3>Thanks for Visiting</h3>
             <p>Interested in collaborating? I'd love to hear from you.</p>
@@ -221,11 +291,6 @@
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
                 </a>
-                <!-- <a href="https://rosarioba.github.io/portfolio2" class="social-link" title="Portfolio" target="_blank" rel="noopener">
-                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                    </svg>
-                </a> -->
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Rosario Bustillo de Azevedo.</p>
