@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Reconciliation Dashboard | Rosario Bustillo de Azevedo</title>
+    <meta name="description" content="Detailed case study of Daily Reconciliation Dashboard - A financial tracking tool for end-of-day accounting built with React and TypeScript">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo-new3.png">
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    
+    <div class="floating-elements">
+        <div class="floating-element">✨</div>
+        <div class="floating-element">💫</div>
+        <div class="floating-element shape"></div>
+        <div class="floating-element">🌟</div>
+        <div class="floating-element">⭐</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo-new3.png" alt="Rosario Bustillo de Azevedo" class="logo-image">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Article -->
+    <article class="project-article">
+        <div class="article-container">
+            <!-- Project Header -->
+            <header class="article-header">
+                <div class="breadcrumb">
+                    <a href="index.html">Portfolio</a> 
+                    <span class="separator">→</span> 
+                    <span>Daily Reconciliation Dashboard</span>
+                </div>
+                
+                <h1 class="article-title">Daily Reconciliation Dashboard 💰</h1>
+                
+                <div class="article-meta">
+                    <span class="project-type">⚡ React + TypeScript Application</span>
+                    <span class="project-date">📅 November 2024 - Present</span>
+                </div>
+
+                <p class="article-summary">
+                    An internal financial dashboard that transforms complex POS data into clear, actionable insights for restaurant managers and accountants. Compares point-of-sale transactions with actual payment tenders across multiple payment methods, highlighting discrepancies in real-time. This ongoing project demonstrates expertise in data visualization, business logic implementation, and building practical tools that solve real operational challenges.
+                </p>
+
+                <div class="article-actions">
+                    <span class="btn-secondary">🔒 Private Client Project</span>
+                    <button class="btn-share" onclick="shareProject()">
+                        📤 Share Project
+                    </button>
+                </div>
+            </header>
+
+            <!-- Project Image -->
+            <section class="project-showcase">
+                <div class="project-image-container">
+                    <div class="image-placeholder">
+                        <div class="placeholder-content">
+                            <span class="placeholder-icon">📊</span>
+                            <p>Daily Reconciliation Dashboard</p>
+                            <small>Screenshot coming soon</small>
+                        </div>
+                    </div>
+                    <div class="image-caption">
+                        Clean dashboard interface showing payment reconciliation with color-coded status indicators and clear difference calculations
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Overview -->
+            <section class="tech-overview">
+                <h2>🛠️ Technical Implementation</h2>
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3>Frontend Framework</h3>
+                        <ul>
+                            <li>React with functional components</li>
+                            <li>TypeScript for type safety</li>
+                            <li>React Hooks (useState, useEffect, useCallback)</li>
+                            <li>Component-based architecture</li>
+                            <li>Modern React patterns</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Business Logic</h3>
+                        <ul>
+                            <li>Complex payment method routing</li>
+                            <li>Multi-source data comparison</li>
+                            <li>Real-time difference calculations</li>
+                            <li>Conditional rendering logic</li>
+                            <li>Status-based visual feedback</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Data & Integration</h3>
+                        <ul>
+                            <li>RESTful API integration</li>
+                            <li>Backend collaboration</li>
+                            <li>POS system data processing</li>
+                            <li>Payment tender verification</li>
+                            <li>Multi-location support</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Features -->
+            <section class="features-section">
+                <h2>📋 Key Features & Highlights</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💳</div>
+                        <h3>Multi-Payment Tracking</h3>
+                        <p>Handles iZettle, Vipps, Cash, Gift Cards, and multiple payment methods with separate tip tracking.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Visual Status Indicators</h3>
+                        <p>Color-coded differences (green for matched, yellow for minor, red for significant) with clear icons.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏪</div>
+                        <h3>Multi-Location Support</h3>
+                        <p>Tracks three locations (DLC, Cafe, Odins) with location-specific color schemes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📅</div>
+                        <h3>Date Navigation</h3>
+                        <p>Easy navigation between days with period status tracking and validation checks.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚠️</div>
+                        <h3>Smart Alerts</h3>
+                        <p>Automatic warnings for open tables, unclosed periods, and open food items.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Cash Counter Integration</h3>
+                        <p>Built-in cash counting modal with API submission to payment system.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Development Process -->
+            <section class="development-process">
+                <h2>🚀 Development & Problem Solving</h2>
+                
+                <div class="process-section">
+                    <h3>🎯 The Business Challenge</h3>
+                    <p>Before this dashboard, managers had to manually scroll through raw POS data with difficult-to-read numbers to reconcile daily transactions. The process was time-consuming, error-prone, and required mental math to spot discrepancies across multiple payment methods and tip categories.</p>
+                    
+                    <div class="improvement-highlight">
+                        <h4>🎯 Solution: Transform Raw Data into Clear Tables</h4>
+                        <p><strong>Before:</strong> Raw numbers requiring scrolling and manual calculations</p>
+                        <p><strong>After:</strong> Clean, organized table showing POS vs Tenders with automatic difference calculations and visual status indicators</p>
+                        <p><strong>Impact:</strong> Saves several minutes per closing and reduces accounting errors</p>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <h3>⚙️ Complex Payment Logic</h3>
+                    <p>The most technically challenging aspect was implementing the payment method routing logic. Different payment methods appear in different columns (POS-only, Tenders-only, or both), and tips are tracked separately for specific methods. This required careful conditional rendering and business rule implementation.</p>
+                    
+                    <div class="improvement-highlight">
+                        <h4>🎯 Implementation Highlights</h4>
+                        <p><strong>shouldShowInPOS():</strong> Determines which methods display in POS column (excludes delivery types)</p>
+                        <p><strong>shouldShowInTenders():</strong> Filters POS-only methods like faktura, offline, brekk</p>
+                        <p><strong>Tip Tracking:</strong> Separate logic for POS tips vs Tender tips per payment method</p>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <h3>🔄 Ongoing Development & Iteration</h3>
+                    <p>This project is actively being developed and improved based on real user feedback from managers and accountants. Working in test mode allows safe development while the backend team builds out remaining features like cash tender submission.</p>
+                    
+                    <div class="improvement-highlight">
+                        <h4>🎯 Current Status</h4>
+                        <p><strong>Completed:</strong> Core reconciliation UI, payment routing, visual indicators, date navigation</p>
+                        <p><strong>In Progress:</strong> Cash counter backend integration, testing with staff</p>
+                        <p><strong>Next:</strong> Production rollout to all locations</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Highlights -->
+            <section class="challenges-section">
+                <h2>💡 Technical Challenges & Solutions</h2>
+                
+                <div class="challenge-item">
+                    <h3>🧮 Payment Method Routing Logic</h3>
+                    <p><strong>Challenge:</strong> Different payment methods need to appear in different table columns with specific tip handling rules.</p>
+                    <p><strong>Solution:</strong> Created helper functions (shouldShowInPOS, shouldShowInTenders, shouldShowPOSTips) that encapsulate business rules and keep components clean.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>📊 Data Visualization for Complex Financial Data</h3>
+                    <p><strong>Challenge:</strong> Making 6+ payment methods with separate amounts, tips, and differences immediately understandable.</p>
+                    <p><strong>Solution:</strong> Color-coded status system (green/yellow/red), clear icons (✓/⚠️/❌), and organized table layout with distinct POS vs Tenders columns.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>⚡ State Management for Multi-Source Data</h3>
+                    <p><strong>Challenge:</strong> Managing period status, open tables, open items, payment data, and location state efficiently.</p>
+                    <p><strong>Solution:</strong> React hooks (useState, useEffect, useCallback) with proper dependency arrays and memoization for optimal performance.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>🤝 Backend Collaboration</h3>
+                    <p><strong>Challenge:</strong> Coordinating frontend development with backend API development by Jerome.</p>
+                    <p><strong>Solution:</strong> Test mode flag for safe frontend development, clear API contract definition, and iterative integration testing.</p>
+                </div>
+            </section>
+
+            <!-- Code Quality -->
+            <section class="code-quality">
+                <h2>🏆 Code Quality & Best Practices</h2>
+                <div class="quality-grid">
+                    <div class="quality-item">
+                        <h3>🎯 Business Logic Clarity</h3>
+                        <p>Extracted complex payment routing into named helper functions for readability and maintainability.</p>
+                    </div>
+                    <div class="quality-item">
+                        <h3>🔒 Type Safety</h3>
+                        <p>TypeScript ensures data structure integrity and catches errors during development.</p>
+                    </div>
+                    <div class="quality-item">
+                        <h3>♻️ DRY Principle</h3>
+                        <p>Reusable status color/icon functions prevent code duplication across components.</p>
+                    </div>
+                    <div class="quality-item">
+                        <h3>🐛 Safe Development</h3>
+                        <p>Test mode flag allows frontend iteration without affecting production data.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Future Enhancements -->
+            <section class="future-improvements">
+                <h2>🌟 Planned Enhancements</h2>
+                <div class="improvements-grid">
+                    <div class="improvement-item">
+                        <h3>💰 Cash Tender Backend</h3>
+                        <p>Complete cash counter API integration for direct submission to payment system.</p>
+                    </div>
+                    <div class="improvement-item">
+                        <h3>📱 Mobile Optimization</h3>
+                        <p>Enhanced mobile layout for managers doing closing on tablets or phones.</p>
+                    </div>
+                    <div class="improvement-item">
+                        <h3>📊 Historical Trends</h3>
+                        <p>Add charts showing reconciliation patterns over time to identify recurring issues.</p>
+                    </div>
+                    <div class="improvement-item">
+                        <h3>🔔 Alert System</h3>
+                        <p>Automated notifications for significant discrepancies or unusual patterns.</p>
+                    </div>
+                    <div class="improvement-item">
+                        <h3>📝 Notes Feature</h3>
+                        <p>Allow managers to add notes explaining specific discrepancies for accounting records.</p>
+                    </div>
+                    <div class="improvement-item">
+                        <h3>📤 Export Functionality</h3>
+                        <p>Export reconciliation data to CSV for accounting software integration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <nav class="project-navigation">
+                <a href="bonita-receipt.html" class="nav-btn prev">
+                    ← Receipt View
+                </a>
+                <a href="index.html" class="nav-btn home">
+                    🏠 Back to Portfolio
+                </a>
+                <a href="numa-booking.html" class="nav-btn next">
+                    Numa Booking →
+                </a>
+            </nav>
+        </div>
+    </article>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Share functionality
+        function shareProject() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Daily Reconciliation Dashboard',
+                    text: 'Check out this financial tracking dashboard built with React and TypeScript!',
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('Project URL copied to clipboard!');
+                });
+            }
+        }
+    </script>
+</body>
+</html>

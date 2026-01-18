@@ -197,7 +197,7 @@ function toggleProject(headerElement) {
     } else {
         // Open this project
         projectItem.classList.add('active');
-        projectContent.style.maxHeight = projectContent.scrollHeight + 'px';
+        projectContent.style.maxHeight = (projectContent.scrollHeight + 100) + 'px';
         projectContent.style.opacity = '1';
         projectContent.style.padding = '0 2rem 2rem 2rem';
         toggle.style.transform = 'rotate(45deg)';

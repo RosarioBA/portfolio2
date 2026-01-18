@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numa Booking System | Rosario Bustillo de Azevedo</title>
+    <meta name="description" content="Detailed case study of Numa Booking System - A hotel breakfast tracking application built with Next.js and TypeScript">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo-new3.png">
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    
+    <div class="floating-elements">
+        <div class="floating-element">✨</div>
+        <div class="floating-element">💫</div>
+        <div class="floating-element shape"></div>
+        <div class="floating-element">🌟</div>
+        <div class="floating-element">⭐</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo-new3.png" alt="Rosario Bustillo de Azevedo" class="logo-image">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Article -->
+    <article class="project-article">
+        <div class="article-container">
+            <!-- Project Header -->
+            <header class="article-header">
+                <div class="breadcrumb">
+                    <a href="index.html">Portfolio</a> 
+                    <span class="separator">→</span> 
+                    <span>Numa Booking System</span>
+                </div>
+                
+                <h1 class="article-title">Numa Booking System 🥐</h1>
+                
+                <div class="article-meta">
+                    <span class="project-type">⚡ Next.js + TypeScript Full-Stack App</span>
+                    <span class="project-date">📅 December 2024 - Present</span>
+                </div>
+
+                <p class="article-summary">
+                    A breakfast service tracking system for hotel guests ordering at Bonita Cafe. Staff can verify authorized rooms, check off arrivals, and view upcoming bookings to streamline operations and prevent unauthorized access. This full-stack application demonstrates expertise in both frontend UI development and backend API implementation, built with Next.js, TypeScript, and modern web technologies with AI assistance.
+                </p>
+
+                <div class="article-actions">
+                    <span class="btn-secondary">🔒 Private Client Project • In Development</span>
+                    <button class="btn-share" onclick="shareProject()">
+                        📤 Share Project
+                    </button>
+                </div>
+            </header>
+
+            <!-- Project Image -->
+            <section class="project-showcase">
+                <div class="project-image-container">
+                    <div class="image-placeholder">
+                        <div class="placeholder-content">
+                            <span class="placeholder-icon">🥐</span>
+                            <p>Numa Booking System</p>
+                            <small>Screenshot coming soon</small>
+                        </div>
+                    </div>
+                    <div class="image-caption">
+                        Clean breakfast tracking interface with card-based layout, visual status indicators, and intuitive check-off system
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Overview -->
+            <section class="tech-overview">
+                <h2>🛠️ Technical Implementation</h2>
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3>Frontend Framework</h3>
+                        <ul>
+                            <li>Next.js for full-stack development</li>
+                            <li>React with TypeScript</li>
+                            <li>Client-side state management</li>
+                            <li>Modern React patterns and hooks</li>
+                            <li>Responsive UI design</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Backend & Database</h3>
+                        <ul>
+                            <li>Next.js API routes</li>
+                            <li>RESTful API design</li>
+                            <li>Database integration</li>
+                            <li>Authentication middleware</li>
+                            <li>Data persistence layer</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Features & Functionality</h3>
+                        <ul>
+                            <li>Room authorization verification</li>
+                            <li>Visual booking cards</li>
+                            <li>Interactive check-off system</li>
+                            <li>Tab-based date navigation</li>
+                            <li>Real-time status updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Features -->
+            <section class="features-section">
+                <h2>📋 Key Features & Highlights</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏨</div>
+                        <h3>Room Verification</h3>
+                        <p>Verify which hotel rooms are authorized for breakfast service to prevent unauthorized access.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✅</div>
+                        <h3>Interactive Check-off</h3>
+                        <p>Visual circle system for tracking individual guests as they arrive for breakfast service.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📅</div>
+                        <h3>Multi-Day View</h3>
+                        <p>Tab navigation for today and tomorrow's bookings with automatic date management.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🍽️</div>
+                        <h3>Menu Display</h3>
+                        <p>Shows menu selections and guest count for each booking to help kitchen preparation.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Visual Status</h3>
+                        <p>Color-coded cards (green for complete, yellow for partial, gray for pending) for quick status recognition.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⏰</div>
+                        <h3>Time Tracking</h3>
+                        <p>Records and displays last service time for each booking to monitor flow.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Development Process -->
+            <section class="development-process">
+                <h2>🚀 Development & Problem Solving</h2>
+                
+                <div class="process-section">
+                    <h3>🎯 The Business Need</h3>
+                    <p>Numa hotel guests order breakfast at Bonita Cafe, but staff needed a way to verify authorized rooms and prevent duplicate or unauthorized service. The system also needed to help staff prepare for upcoming bookings and track which guests had already been served.</p>
+                    
+                    <div class="improvement-highlight">
+                        <h4>🎯 Solution: Digital Booking Tracker</h4>
+                        <p><strong>Before:</strong> Manual verification and tracking prone to errors</p>
+                        <p><strong>After:</strong> Digital system showing authorized rooms with visual check-off and menu information</p>
+                        <p><strong>Impact:</strong> Prevents unauthorized access, reduces service errors, helps kitchen preparation</p>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <h3>⚙️ Full-Stack Development with AI</h3>
+                    <p>This project showcases full-stack capabilities - building both the frontend React UI and the backend API routes with Next.js. Leveraged AI assistance to accelerate development while maintaining code quality and learning new patterns. The project demonstrates ability to work across the entire stack and deliver complete solutions.</p>
+                    
+                    <div class="improvement-highlight">
+                        <h4>🎯 Technical Approach</h4>
+                        <p><strong>Frontend:</strong> TypeScript interfaces, React state management, responsive card layout</p>
+                        <p><strong>Backend:</strong> API routes, database queries, authentication, data validation</p>
+                        <p><strong>AI Collaboration:</strong> Used AI to accelerate development and learn best practices</p>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <h3>🎨 UI/UX Design Decisions</h3>
+                    <p>Designed the interface to be simple and intuitive for cafe staff during busy breakfast service. Used a card-based layout inspired by modern task management apps, with visual indicators that don't require reading. The check-off circles provide satisfying visual feedback as guests are served.</p>
+                    
+                    <div class="improvement-highlight">
+                        <h4>🎯 Design Highlights</h4>
+                        <p><strong>Visual Hierarchy:</strong> Large room numbers, menu info, and clear status colors</p>
+                        <p><strong>Touch-Friendly:</strong> Large click targets for circles (28px) work well on tablets</p>
+                        <p><strong>Confirmation Dialog:</strong> Prevents accidental early service of tomorrow's bookings</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Highlights -->
+            <section class="challenges-section">
+                <h2>💡 Technical Challenges & Solutions</h2>
+                
+                <div class="challenge-item">
+                    <h3>🔄 State Management Across Components</h3>
+                    <p><strong>Challenge:</strong> Managing bookings, service status, and date filtering efficiently.</p>
+                    <p><strong>Solution:</strong> React hooks (useState, useEffect) with proper dependency management and optimistic updates for responsive UI.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>📊 Data Aggregation Logic</h3>
+                    <p><strong>Challenge:</strong> Grouping bookings by date, calculating service progress, handling edge cases.</p>
+                    <p><strong>Solution:</strong> Created helper functions for date grouping, service summary calculations, and status determination with clear business logic.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>🛡️ Preventing Errors</h3>
+                    <p><strong>Challenge:</strong> Staff might accidentally serve tomorrow's breakfast early.</p>
+                    <p><strong>Solution:</strong> Implemented confirmation dialog specifically for tomorrow's bookings with clear warning message.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>🔐 Authentication & Security</h3>
+                    <p><strong>Challenge:</strong> Protecting booking data while keeping login simple for staff.</p>
+                    <p><strong>Solution:</strong> Password-based session storage with API middleware validation for secure yet user-friendly access.</p>
+                </div>
+            </section>
+
+            <!-- Code Quality -->
+            <section class="code-quality">
+                <h2>🏆 Code Quality & Best Practices</h2>
+                <div class="quality-grid">
+                    <div class="quality-item">
+                        <h3>📏 TypeScript Safety</h3>
+                        <p>Comprehensive type definitions for bookings, service data, and API responses ensure reliability.</p>
+                    </div>
+                    <div class="quality-item">
+                        <h3>🧩 Component Structure</h3>
+                        <p>Clean separation of concerns with focused functions for rendering cards, handling clicks, formatting dates.</p>
+                    </div>
+                    <div class="quality-item">
+                        <h3>♻️ Reusable Logic</h3>
+                        <p>Helper functions (formatTabLabel, getStatus, isTomorrow) keep code DRY and maintainable.</p>
+                    </div>
+                    <div class="quality-item">
+                        <h3>🎯 Business Logic Clarity</h3>
+                        <p>Clear naming and comments explain business rules like service types and date calculations.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Future Enhancements -->
+            <section class="future-improvements">
+                <h2>🌟 Planned Enhancements</h2>
+                <div class="improvements-grid">
+                    <div class="improvement-item">
+                        <h3>🚀 Production Rollout</h3>
+                        <p>Complete testing and deploy to production for daily staff use.</p>
+                    </div>
+                    <div class="improvement-item">
+                        <h3>📊 Service Analytics</h3>
+                        <p>Track peak times, popular menu items, and service patterns for better planning.</p>
+                    </div>
+                    <div class="improvement-item">
+                        <h3>🔔 Notifications</h3>
+                        <p>Alert staff about upcoming bookings or when many guests arrive simultaneously.</p>
+                    </div>
+                    <div class="improvement-item">
+                        <h3>📱 Mobile App</h3>
+                        <p>Native mobile app for even better tablet and phone experience.</p>
+                    </div>
+                    <div class="improvement-item">
+                        <h3>🏨 Hotel Integration</h3>
+                        <p>Sync with Numa's booking system for automatic updates and guest information.</p>
+                    </div>
+                    <div class="improvement-item">
+                        <h3>📈 Reporting</h3>
+                        <p>Generate daily and weekly reports for accounting and operational insights.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <nav class="project-navigation">
+                <a href="reconciliation.html" class="nav-btn prev">
+                    ← Reconciliation Dashboard
+                </a>
+                <a href="index.html" class="nav-btn home">
+                    🏠 Back to Portfolio
+                </a>
+                <a href="holidaze.html" class="nav-btn next">
+                    Holidaze Platform →
+                </a>
+            </nav>
+        </div>
+    </article>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Share functionality
+        function shareProject() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Numa Booking System',
+                    text: 'Check out this breakfast tracking system built with Next.js and TypeScript!',
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('Project URL copied to clipboard!');
+                });
+            }
+        }
+    </script>
+</body>
+</html>
