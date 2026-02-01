@@ -935,16 +935,33 @@ body {
 }
 
 .project-image-container {
+    max-width: 1000px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.project-main-image {
+.project-image {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     height: auto;
     border-radius: 15px;
     box-shadow: var(--shadow-xl);
     margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile responsive for project images */
+@media (max-width: 768px) {
+    .project-image-container {
+        padding: 0;
+    }
+    
+    .project-image {
+        max-width: 100%;
+        border-radius: 10px;
+    }
 }
 
 /* Image Placeholder Styles */
